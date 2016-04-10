@@ -24,6 +24,9 @@ public class MainActivity extends FragmentActivity {
         Log.d("XXX",
                 this.getClass().getSimpleName() + " " + Thread.currentThread().getStackTrace()[2]
                         .getMethodName());
+        if (mShouldFinish) {
+            finish();
+        }
     }
 
     @Override
@@ -32,9 +35,6 @@ public class MainActivity extends FragmentActivity {
         Log.d("XXX",
                 this.getClass().getSimpleName() + " " + Thread.currentThread().getStackTrace()[2]
                         .getMethodName());
-        if (mShouldFinish) {
-            finish();
-        }
     }
 
     @Override
